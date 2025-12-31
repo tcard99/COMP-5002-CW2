@@ -24,7 +24,10 @@ Each tier would document their findings to help the next tier up or for future u
 
 The BOTSv3 dataset and the guided questions help to represent SOC workflows by requiring me to investigate logs and correlate events across the sources as well as to critically think about what has happened and where the gaps in the system could be. It also helps to reinforce the need for structure and clear documentation as to help have cross team collaboration and informing relevant people. 
 
-# Splunk installation
+# Installation and Data Preparation
+In order to investigate the BOTSv3 dataset and to be able to answer the guided questions Splunk Enterprise was installed and configured to run on an Ubuntu Virtual Machine (VM). Splunk is a tool for generated data like logs, metrics or events allowing users to search through the data and analyse it. For cyber security/SOC teams it allows them to detect, investigate and respond to cyber threats in real time allowing easy access/readability to the dataset [3]. This section will go through the installation of Splunk as well as downloading and loading the dataset into the Splunk environment.
+
+## Splunk installation
 To download Splunk Enterprise  a user account is required. After logged in navigate to the Lunix section as I am using Ubuntu. You are met with three options .deb, .tgz and .rpm as seen in the screenshot. I copied the wget for tgz and pasted it into the terminal. Once downloaded it had to be unzipped and moved to the /opt directory. As shown in the screenshot.
 
 <img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/SplunkWebDownload.png">
