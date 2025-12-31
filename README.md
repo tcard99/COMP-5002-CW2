@@ -31,4 +31,11 @@ To download Splunk Enterprise  a user account is required. After logged in navig
 <img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/UnzippingSplunk.png">
 
 From here navigate to the /opt/splunk/bin and run sudo ./splunk start –accept-license. As it is the first time running Splunk it will ask to enter username and password. After that it will then start running on localhost:8000. When you navigate to localhost:8000 you are met with a login page. 
+<img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/splunkLoginPage.png">
+
+Once have logged in you will see the dashboard confirming that the installation was successful.
+
+<img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/SplunkDashboard.png">
+
+
 
