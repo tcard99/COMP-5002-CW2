@@ -19,3 +19,7 @@ SOC teams often operate in a structured tiers each have their own roles and resp
 Tier 2 is the incident response. This tier is responsible for diving deeper into the logs and/or alerts from tier 1 team. They would also correlate other events to detect any patterns and to try and isolate the compromised host [2]. In relation to the BOTSv3 dataset tier 2 is the area in which this report takes on using Splunk queries to trace the attackers actions, email logs and cloud services forming a report on what has happened and how. 
 Tier 3 is the threat hunters. They are responsible for advanced forensics and reverse engineering malicious code so that they can improve their detection for future attacks [2]. Within the BOTSv3 dataset the tier 3 responsibilities would include identifying mechanisms and analysing the malicious scripts that had been detected such as in email attachments or uploaded files to 
 the cloud services like OneDrive. 
+
+Each tier would document their findings to help the next tier up or for future use in order to help explain why the incident happened and why and how it can be prevented to stop future attacks. 
+
+The BOTSv3 dataset and the guided questions help to represent SOC workflows by requiring me to investigate logs and correlate events across the sources as well as to critically think about what has happened and where the gaps in the system could be. It also helps to reinforce the need for structure and clear documentation as to help have cross team collaboration and informing relevant people. 
