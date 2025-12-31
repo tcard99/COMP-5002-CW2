@@ -28,3 +28,7 @@ The BOTSv3 dataset and the guided questions help to represent SOC workflows by r
 To download Splunk Enterprise  a user account is required. After logged in navigate to the Lunix section as I am using Ubuntu. You are met with three options .deb, .tgz and .rpm as seen in the screenshot. I copied the wget for tgz and pasted it into the terminal. Once downloaded it had to be unzipped and moved to the /opt directory. As shown in the screenshot.
 
 <img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/SplunkWebDownload.png">
+<img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/UnzippingSplunk.png">
+
+From here navigate to the /opt/splunk/bin and run sudo ./splunk start –accept-license. As it is the first time running Splunk it will ask to enter username and password. After that it will then start running on localhost:8000. When you navigate to localhost:8000 you are met with a login page. 
+
