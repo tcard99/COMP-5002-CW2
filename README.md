@@ -22,10 +22,12 @@ the cloud services like OneDrive.
 
 Each tier would document their findings to help the next tier up or for future use in order to help explain why the incident happened and why and how it can be prevented to stop future attacks. 
 
+SOC teams have a structured method of prevention which focuses on reducing attacks by security controls and staff training, detection where SOC would identify suspicious activity by looking at logs, response is when they would identify and isolating devices to stop the spread or disable new accounts and recovery focuses on restoring the infrastructure back to normal by destroying the malicious files or accounts[3]. 
+
 The BOTSv3 dataset and the guided questions help to represent SOC workflows by requiring me to investigate logs and correlate events across the sources as well as to critically think about what has happened and where the gaps in the system could be. It also helps to reinforce the need for structure and clear documentation as to help have cross team collaboration and informing relevant people. 
 
 # Installation and Data Preparation
-In order to investigate the BOTSv3 dataset and to be able to answer the guided questions Splunk Enterprise was installed and configured to run on an Ubuntu Virtual Machine (VM). Splunk is a tool for generated data like logs, metrics or events allowing users to search through the data and analyse it. For cyber security/SOC teams it allows them to detect, investigate and respond to cyber threats in real time allowing easy access/readability to the dataset [3]. This section will go through the installation of Splunk as well as downloading and loading the dataset into the Splunk environment.
+In order to investigate the BOTSv3 dataset and to be able to answer the guided questions Splunk Enterprise was installed and configured to run on an Ubuntu Virtual Machine (VM). Splunk is a tool for generated data like logs, metrics or events allowing users to search through the data and analyse it. For cyber security/SOC teams it allows them to detect, investigate and respond to cyber threats in real time allowing easy access/readability to the dataset [4]. This section will go through the installation of Splunk as well as downloading and loading the dataset into the Splunk environment.
 
 ## Splunk installation
 To download Splunk Enterprise  a user account is required. After logged in navigate to the Lunix section as I am using Ubuntu. You are met with three options .deb, .tgz and .rpm as seen in the screenshot. I copied the wget for tgz and pasted it into the terminal. Once downloaded it had to be unzipped and moved to the /opt directory. As shown in the screenshot.
@@ -42,9 +44,12 @@ Once have logged in you will see the dashboard confirming that the installation 
 
 ## Data Preparation
 Once Splunk has been set up I now need to download and load the BOTSv3 dataset into Splunk. To get the BOTSv3 dataset you need to go to the GitHub repo which can be seen in the
-screenshot [4]. 
+screenshot [5]. 
 <img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/BOTSv3Git.png">
 Download and then extract it once downloaded. Before loading the BOTSv3 dataset Splunk was stopped using sudo ./splunk stop. This means that the dataset can be loaded into spunk properly. Once extracted use the terminal to copy it into Splunk so that it can be accessed and used. To copy use the following command shown in screenshot. 
 <img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/BOTSv3CopyCommand.png">
 
 Putting the dataset in this location means that Splunk can access the logs when restarted. This allows the dataset to be queried, analysed which can then be used to answer the questions.  
+
+# BOTSv3Questions
+## Question1
