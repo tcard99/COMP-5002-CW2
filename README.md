@@ -47,3 +47,4 @@ screenshot [4].
 Download and then extract it once downloaded. Before loading the BOTSv3 dataset Splunk was stopped using sudo ./splunk stop. This means that the dataset can be loaded into spunk properly. Once extracted use the terminal to copy it into Splunk so that it can be accessed and used. To copy use the following command shown in screenshot. 
 <img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/BOTSv3CopyCommand.png">
 
+Putting the dataset in this location means that Splunk can access the logs when restarted. This allows the dataset to be queried, analysed which can then be used to answer the questions.  
