@@ -102,3 +102,30 @@ Looking at the result, the name of the file was HxTsr.exe
 <img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/q3answerCloseup.png">
 
 ## Question4
+
+This question wanted me to find the password for the user created by root. Linux uses useradd/adduser to create a new account.
+
+<img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/q4Firstsearch.png">
+<img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/q4firstsearchresult.png">
+
+After research I found that to view logs for login attempts, root/sudo usage you look at /var/log/auth.log [9]. From the initial search 67 events came back including auth.log
+
+<img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/q4sourcelist.png">
+
+Adding to the search showed a user with UID 0 which = root [10] created a user called tomcat7
+
+<img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/q4varauth.png">
+
+Next search was:
+
+<img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/q4tomcat7search.png>
+
+Which returned 8 events 
+
+<img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/q4tomcat7result.png">
+
+Looking at the text next -p which is password when making new users showed ilovedavidverve was the password
+
+For SOC teams identifying the password from a malicious user creation allows them to confirm whether an attacker has successfully established connection into the system as well as being able to detect other user account creations. Detecting this activity allows SOC to disable, reset passwords and look for any other unauthorised changes.
+
+## Question 5
