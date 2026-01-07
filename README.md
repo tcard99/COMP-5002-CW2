@@ -1,6 +1,7 @@
 # COMP-5002-CW2
 
 ## Introduction
+
 A Security Operations Centre (SOC) is responsible for continuously monitoring an organisation’s systems, detecting malicious activity, and coordinating incident response [1]. The Boss of the SOC v3 (BOTSv3) exercise provides a realistic Splunk‑based simulation of these responsibilities through a multistage cyber incident affecting the fictional company Frothly. The dataset includes network, endpoint, email, and cloud logs, enabling analysts to reconstruct attacker behaviour and identify indicators of compromise.
 The objective of this investigation is to analyse the BOTSv3 dataset using Splunk, answer the 300‑level guided questions, and evaluate how SOC roles, processes, and incident‑handling methodologies apply to the scenario. The report also reflects on prevention, detection, response, and recovery activities relevant to the incident.
 * Scope
@@ -13,6 +14,7 @@ The objective of this investigation is to analyse the BOTSv3 dataset using Splun
  
 
 # SOC Roles and Incident handling
+
 SOC teams operate in structured tiers; there are three different tiers, with each tier contributing a distinct layer of defence during a cyber incident.
 
 The first tier is analyst or alert monitoring. They are responsible for monitoring alerts and identifying suspicious activity [2]. In relation to the BOTSv3 dataset this tier team would be the first to observe any suspicious activity or anomalies. Their role would be to determine whether an activity or alert requires an escalation.
@@ -25,9 +27,11 @@ The BOTSv3 exercise demonstrates how SOC tiers and incident handling methodologi
 
 
 # Installation and Data Preparation
+
 To investigate the BOTSv3 dataset and answer the guided questions Splunk was installed and configured to run on an Ubuntu Virtual Machine (VM). Splunk is a tool for data like logs or events allowing users to search the data and analyse it. For SOC teams it allows them to detect, investigate and respond to cyber threats in real time allowing easy access/readability to the dataset [4].
 
 ## Splunk installation
+
 To download Splunk an account is required. After logging in, navigate to the Lunix section as I used Ubuntu. I copied the wget for tgz and pasted it into the terminal. Once downloaded it had to be unzipped and moved to the /opt directory. 
 
 <img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/SplunkWebDownload.png">
@@ -38,6 +42,7 @@ From here navigate to the /opt/splunk/bin and run sudo ./splunk start --accept-l
 
 
 ## Data Preparation
+
 Once Splunk had been set up I needed to download the BOTSv3 dataset from GitHub[5] and then load dataset into Splunk. Once downloaded the file needed extracting.
 
 <img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/SplunkDashboard.png">
@@ -48,7 +53,9 @@ Before loading the BOTSv3 dataset Splunk was stopped using sudo ./splunk stop. O
 
 Using Splunk on a VM is how SOC teams set up their environment as it ensures Splunk performs reliably without affecting the host system. VM is a lightweight and stable Operating System (OS) and works well with Splunk. SOC teams typically rely on isolated, controlled, and reproducible environments for analysis, testing, and training. The BOTSv3 dataset includes malware samples, malicious macros, and attacker tools. Analysing these within a VM ensures they cannot interact with the host OS or network, aligning with SOC containment principles.
 # BOTSv3Questions
+
 ## Question1
+
 To find the user agent string that was associated with the uploaded of a malicious link file to OneDrive. I used ‘ms:o365:management’ as the source type which logs Office365 and OneDrive activity. Running the following query returned 1,073 events.
 
 <img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/q1Firstsearchupclose.png">
@@ -65,3 +72,19 @@ Additional filtering was required to find the user agent. The full user agent st
 User agent strings are useful SOC teams as they can be used to find out if the activity came from expected/approved sources or unexpected/suspicious sources. In this case the user agent used NaenaraBrowser which is a North Korean web browser forked from Mozilla Firefox [6]. This is unusual within the organisation, which would prompt a tier 1 SOC member to escalate this event. 
 
 ## Question2
+
+To search for a macro enabled attachment that has been detected as malware you would need to do the following steps. As the file was delivered by email, I looked for email events. Using stream:smtp as the sourcetype and I looked for alerts. I ran the query shown in the screenshot.
+
+<img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/Q2firstsearch.png">
+
+I added a keyword filter *xlsm* to the end of the query which retuned three results however the file attachments were png and jpg and not relevant. I changed the filter from *xlsm* to *alert*. The query then returned 3 results but only one with an attachment called Malware Alert Text.txt. This is part of Office365 Advanced Threat protection where unsafe attachments are removed and are substituted for a text file [7] named above.
+
+<img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/q2txtfilebeforedeeper.png">
+
+Looking at the information for this event and the email it stated here is the financial model that could be used for FY2019 with instructions saying to enable the macros. Reading on the file name was encoded using base64. Using cyberchef [8] I decoded the attachment name: Frothly-Brewery-Financial-Planning-FY2019-draft.xlsm.
+
+<img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/q2Rawdata.png">
+<img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/q2base64convert.png">
+
+Tier 1 SOC members would escalate this as malware; the other tiers would investigate if the email/attachment/macros had been opened and if any response/measures needed to take place.
+
