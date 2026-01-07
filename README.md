@@ -152,3 +152,14 @@ It is important for SOC teams to know what groups a user has been added to as it
 
 ## Question7
 
+This task wanted me to find the process Id for the process listening on a leet port. A leet port is 1337 and is often used by hackers [12]. Osquery logs open ports found on the Linux host hoth.  
+
+<img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/q7Query.png">
+
+The above query was run, and five results were returned Looking at these results only one had port listed. The process Id is: 14356.
+
+<img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/q7results.png">
+
+It is important for SOC to identify which processes are listening on unusual/suspicious ports as it can help them to determine if the attacker has established unauthorised access to the system and if the activity is legitimate. Once the SOC team has assessed and confirmed it is suspicious then they can terminate the process.
+
+## Question8
