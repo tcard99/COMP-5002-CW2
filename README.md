@@ -4,12 +4,12 @@
 A Security Operations Centre (SOC) is responsible for continuously monitoring an organisation’s systems, detecting malicious activity, and coordinating incident response [1]. The Boss of the SOC v3 (BOTSv3) exercise provides a realistic Splunk‑based simulation of these responsibilities through a multistage cyber incident affecting the fictional company Frothly. The dataset includes network, endpoint, email, and cloud logs, enabling analysts to reconstruct attacker behaviour and identify indicators of compromise.
 The objective of this investigation is to analyse the BOTSv3 dataset using Splunk, answer the 300‑level guided questions, and evaluate how SOC roles, processes, and incident‑handling methodologies apply to the scenario. The report also reflects on prevention, detection, response, and recovery activities relevant to the incident.
 * Scope
- * Analysis is limited to the BOTSv3 dataset and Splunk environment.
- * Only the provided log sources are used
- * Focus is on the 300‑level questions and their relevance to SOC operations.
+  * Analysis is limited to the BOTSv3 dataset and Splunk environment.
+  * Only the provided log sources are used
+  * Focus is on the 300‑level questions and their relevance to SOC operations.
 * Assumptions
- * BOTSv3 logs are complete and accurately represent the incident timeline.
- * Splunk is assumed to be correctly configured.
+  * BOTSv3 logs are complete and accurately represent the incident timeline.
+  * Splunk is assumed to be correctly configured.
  
 
 # SOC Roles and Incident handling
