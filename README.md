@@ -1,5 +1,7 @@
 # COMP-5002-CW2
 
+Video: https://www.youtube.com/watch?v=KOkh1FQtEjg
+
 ## Introduction
 
 A Security Operations Centre (SOC) is responsible for continuously monitoring an organisation’s systems, detecting malicious activity, and coordinating incident response [1]. The Boss of the SOC v3 (BOTSv3) exercise provides a realistic Splunk‑based simulation of these responsibilities through a multistage cyber incident affecting the fictional company Frothly. The dataset includes network, endpoint, email, and cloud logs, enabling analysts to reconstruct attacker behaviour and identify indicators of compromise.
@@ -88,3 +90,15 @@ Looking at the information for this event and the email it stated here is the fi
 
 Tier 1 SOC members would escalate this as malware; the other tiers would investigate if the email/attachment/macros had been opened and if any response/measures needed to take place.
 
+## Question3
+
+This question wanted me to find the name of the executable that was embedded in the malware from Q2. Using XmlWinEventLog:Microsoft-Windows-Sysmon/Operational as the source type. Following on from this as new the file name I added this to the query search. 
+
+<img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/Q3Search.png">
+<img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/q3Resukt.png">
+
+Looking at the result, the name of the file was HxTsr.exe
+
+<img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/q3answerCloseup.png">
+
+##Question4
