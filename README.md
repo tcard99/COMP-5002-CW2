@@ -163,3 +163,21 @@ The above query was run, and five results were returned Looking at these results
 It is important for SOC to identify which processes are listening on unusual/suspicious ports as it can help them to determine if the attacker has established unauthorised access to the system and if the activity is legitimate. Once the SOC team has assessed and confirmed it is suspicious then they can terminate the process.
 
 ## Question8
+
+To find the MD5 value of the file that was downloaded on Fyodor’s machine and used to scan the network. I ran a query using Sysmon, xmlkv and EventID-3. This returned 3,931 events. Additional data filtering using ssh produced five results. All five results mentioned hdoor.exe.
+
+<img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/q8xrvfirstsearch.png">
+<img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/q8sshsearch.png">
+<img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/q8sshdataresuts.png">
+
+I then searched using the filters for hdoor and md5 and one result came back.
+
+<img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/q8finalsearchbar.png">
+<img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/q8answeroverview.png">
+
+Looking closer at the event I found the MD5 value which was MD5=586EF56F4D8963DD546163AC31C865D7. 
+
+<img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/q8answerxloseup.png">
+
+For SOC teams identifying the MD5 can be helpful as MD5 are unique and the SOC team can check if the same file has been used/appeared anywhere else on the system or devices allowing to see scale of attack. SOC members can also block the file across the system to stop further compromise. 
+
