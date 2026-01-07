@@ -128,4 +128,14 @@ Looking at the text next -p which is password when making new users showed ilove
 
 For SOC teams identifying the password from a malicious user creation allows them to confirm whether an attacker has successfully established connection into the system as well as being able to detect other user account creations. Detecting this activity allows SOC to disable, reset passwords and look for any other unauthorised changes.
 
-## Question 5
+## Question5
+
+To find the name of the user that was created after the endpoint was compromised without knowledge if the endpoint is Windows or Linux. To find the new user I used WinEventLog:Security as source and searched for eventcode 4720. 
+The new account name was svcvnc.
+ 
+<img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/q5Quiery.png">
+<img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/q5answer.png">
+
+SOC detecting new user creations is important especially after being compromised. To further help in the creation eventcode 4720 is generated when a new local windows account has been created [11]. Once detected SOC teams can disable/monitor the account.
+
+## Question6
