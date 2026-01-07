@@ -118,7 +118,7 @@ Adding to the search showed a user with UID 0 which = root [10] created a user c
 
 Next search was:
 
-<img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/q4tomcat7search.png>
+<img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/q4tomcat7search.png">
 
 Which returned 8 events 
 
