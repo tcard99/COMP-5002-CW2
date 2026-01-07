@@ -181,3 +181,7 @@ Looking closer at the event I found the MD5 value which was MD5=586EF56F4D8963DD
 
 For SOC teams identifying the MD5 can be helpful as MD5 are unique and the SOC team can check if the same file has been used/appeared anywhere else on the system or devices allowing to see scale of attack. SOC members can also block the file across the system to stop further compromise. 
 
+# Conclusion
+
+Overall, the BOTSv3 investigation provided a clear demonstration of how a SOC identifies, analyses, and responds to complex cyberattacks by correlating evidence across multiple log sources. The scenario highlighted key attack vectors, including phishing emails, malicious macro documents, unauthorised account creation, privilege escalation, and suspicious network activity; which collectively illustrated how adversaries progress through an environment and maintain persistence. These insights emphasise the necessity of comprehensive log coverage, effective correlation across data sources, and continuous tuning of detection rules to keep pace with evolving threats. Strengthening automated alerting, improving phishing defences, and enhancing visibility across endpoints and authentication systems would significantly improve detection and response capabilities. Ultimately, the exercise reinforces that a mature SOC depends not only on tools like Splunk, but on well‑designed processes, proactive detection engineering, and the ability to interpret diverse data sources to build an accurate picture of an unfolding attack. 
+
