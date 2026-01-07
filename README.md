@@ -49,3 +49,19 @@ Before loading the BOTSv3 dataset Splunk was stopped using sudo ./splunk stop. O
 Using Splunk on a VM is how SOC teams set up their environment as it ensures Splunk performs reliably without affecting the host system. VM is a lightweight and stable Operating System (OS) and works well with Splunk. SOC teams typically rely on isolated, controlled, and reproducible environments for analysis, testing, and training. The BOTSv3 dataset includes malware samples, malicious macros, and attacker tools. Analysing these within a VM ensures they cannot interact with the host OS or network, aligning with SOC containment principles.
 # BOTSv3Questions
 ## Question1
+To find the user agent string that was associated with the uploaded of a malicious link file to OneDrive. I used ‘ms:o365:management’ as the source type which logs Office365 and OneDrive activity. Running the following query returned 1,073 events.
+
+<img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/q1Firstsearchupclose.png">
+
+The screenshot shows a lot of information about the event like the IP address, user agent, filename. 
+
+<img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/q1FirstSearch.png">
+
+Additional filtering was required to find the user agent. The full user agent string that had uploaded link file was Mozilla/5.0 (X11; U; Linux i686; ko-KP; rv: 19.1br) Gecko/20130508 Fedora/1.9.1-2.5.rs3.0 NaenaraBrowser/3.5b4
+
+<img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/q1SecondSearchupclose.png">
+<img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/q1SecondSearch.png">
+
+User agent strings are useful SOC teams as they can be used to find out if the activity came from expected/approved sources or unexpected/suspicious sources. In this case the user agent used NaenaraBrowser which is a North Korean web browser forked from Mozilla Firefox [6]. This is unusual within the organisation, which would prompt a tier 1 SOC member to escalate this event. 
+
+## Question2
