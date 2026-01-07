@@ -139,3 +139,16 @@ The new account name was svcvnc.
 SOC detecting new user creations is important especially after being compromised. To further help in the creation eventcode 4720 is generated when a new local windows account has been created [11]. Once detected SOC teams can disable/monitor the account.
 
 ## Question6
+
+This question wanted to know which groups svcvnc had been assigned to in alphabetical order. Using the same source as the previous query: WinEventLog:Secuirty. I then added the username and group in the query. 
+
+<img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/q6search.png">
+
+This retuned 2 events which showed the groups svcvnc was assigned to. The groups were: administrators, user
+
+<img src="https://github.com/tcard99/COMP-5002-CW2/blob/main/Screenshots/q6admin.png">
+
+It is important for SOC teams to know what groups a user has been added to as it informs them of how much access to the system the attacker has. In this case as the attacker has admin access the incident would be elevated due to the severity as the attacker has free roam of the system which could lead to them disabling security controls. 
+
+## Question7
+
