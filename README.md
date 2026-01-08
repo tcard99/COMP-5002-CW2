@@ -189,25 +189,36 @@ Overall, the BOTSv3 investigation provided a clear demonstration of how a SOC id
 
 [1]
 IBM, “Security Operations Center,” Ibm.com, Nov. 24, 2021. https://www.ibm.com/think/topics/security-operations-center
+
 [2]
 M. D. Awan, “A Security Operations Center (SOC) is the backbone of an organization’s cybersecurity strategy. It operates 24/7 to detect, analyze, respond to, and prevent cyber threats.,” Linkedin.com, Mar. 15, 2025. https://www.linkedin.com/pulse/soc-structure-tier-1-2-3-analysts-muhammad-dilshad-i9nef (accessed Dec. 28, 2025).
+
 [3]
 M. Rafter Pinto Pinto, “Employing Effective SOC Incident Response Strategies: Cybersecurity Best Practices for incident management,” eventussecurity.com, Feb. 27, 2024. https://eventussecurity.com/cybersecurity/soc/role-incident-response/
+
 [4]
 C. Kidd, “What Is Splunk & What Does It Do? An Introduction To Splunk,” Splunk-Blogs, Apr. 30, 2024. https://www.splunk.com/en_us/blog/learn/what-splunk-does.html
+
 [5]
 R. Kovar et al., “Boss of the SOC (BOTS) Dataset Version 3,” GitHub, Mar. 26, 2022. https://github.com/splunk/botsv3
+
 [6]
 Grokipedia, “Naenara (browser),” Grokipedia, Jan. 21, 1970. https://grokipedia.com/page/Naenara_(browser) (accessed Dec. 29, 2025).
+
 [7]
 University of Pennsylvania Carey Law School, “O365 Advanced Threat Protection,” www.law.upenn.edu. https://www.law.upenn.edu/its/docs/office/office-365-ATP.php
+
 [8]
 GCHQ, “CyberChef,” cyberchef.io. https://cyberchef.io/
+
 [9]
 W. can, “Where can I find logs regarding the user creation?,” Ask Ubuntu, Aug. 28, 2012. https://askubuntu.com/questions/181357/where-can-i-find-logs-regarding-the-user-creation (accessed Dec. 30, 2025).
+
 [10]
 LinuxVox, “Understanding UID in Linux,” linuxvox, Nov. 14, 2025. https://linuxvox.com/blog/what-is-a-uid-in-linux/ (accessed Dec. 30, 2025).
+
 [11]
 vinaypamnani-msft, “4720(S) A user account was created. - Windows 10,” learn.microsoft.com, Sep. 07, 2021. https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4720
+
 [12]
 PortNumbers, “PORT 1337: What Is It and What Is It Used For? - portnumbers.info,” Portnumbers.info, 2025. https://www.portnumbers.info/1337/ (accessed Dec. 31, 2025).
